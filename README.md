@@ -11,22 +11,10 @@ Eduardo Figueiredo - RA: 166730 - Email: edu.evangelista.figueiredo@gmail.com - 
 
 **Motivação**: tornar os dados de acidentes de trabalho ocorridos no estado de São Paulo mais acessíveis e mais claros para a população. Os dados são idicadores que mostram o índice de mortalidade por acidentes de trabalho, e partir destes, realizar decisões otimizadoras para que estes acidentes sejam minimizados.
 
-**Fonte de Dados**: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/ext10sp.def
+**Fonte de Dados**: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/ext10sp.def (Arquivo usado presente no projeto)
 
 Os dados obtidos podem conter e serem classificados pelos seguintes atributos:
-Região de Saúde (CIR),
-Macrorregião de Saúde,
-Divisão de Administração Estadual,
-Microregião IBGE,
-Região Metropolitana - RIDE
-Grande Grupo CID10,
-Mês do Óbito,
-Faixa Etária,
-Sexo,
-Cor/Raça,
-Escolaridade,
-Estado Civil,
-Local Ocorrência.
+Ano (1996-2014)
 
 **Volume de Dados**: 11.373 dados correspondentes aos anos de (1996-2014).
 
