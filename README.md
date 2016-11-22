@@ -11,7 +11,7 @@ Eduardo Figueiredo - RA: 166730 - Email: edu.evangelista.figueiredo@gmail.com - 
 
 **Motivação**: tornar os dados de acidentes de trabalho ocorridos no estado de São Paulo mais acessíveis e mais claros para a população. Os dados são idicadores que mostram o índice de mortalidade por acidentes de trabalho, e partir destes, realizar decisões otimizadoras para que estes acidentes sejam minimizados.
 
-**Fonte de Dados**: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/ext10sp.def (Arquivo usado presente no projeto)
+**Fonte de Dados**: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/ext10sp.def (Arquivo MorteAcidente.csv usado presente no diretório do projeto)
 
 Os dados obtidos podem conter e serem classificados pelos seguintes atributos:
 Ano (1996-2014)
