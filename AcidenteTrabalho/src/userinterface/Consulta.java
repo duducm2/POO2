@@ -25,7 +25,7 @@ public class Consulta extends javax.swing.JFrame {
      * Creates new form Consulta
      */
     public Consulta() throws IOException {
-        this.datas = new Datasus(new File("MorteAcidente.csv"));
+        this.datas = new Datasus(new File(java.util.ResourceBundle.getBundle("userinterface/lingua_pt").getString("MORTEACIDENTE.CSV")));
         initComponents();
     }
 
@@ -65,15 +65,16 @@ public class Consulta extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("jMenu1");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("userinterface/lingua_pt"); // NOI18N
+        jMenu1.setText(bundle.getString("JMENU1")); // NOI18N
 
-        jMenu2.setText("jMenu2");
+        jMenu2.setText(bundle.getString("JMENU2")); // NOI18N
 
-        jMenu3.setText("jMenu3");
+        jMenu3.setText(bundle.getString("JMENU3")); // NOI18N
 
-        jMenu4.setText("jMenu4");
+        jMenu4.setText(bundle.getString("JMENU4")); // NOI18N
 
-        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setText(bundle.getString("JMENUITEM1")); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,8 +99,8 @@ public class Consulta extends javax.swing.JFrame {
         label3.setAlignment(java.awt.Label.CENTER);
         label3.setBackground(new java.awt.Color(0, 153, 0));
         label3.setFont(new java.awt.Font("Californian FB", 0, 18)); // NOI18N
-        label3.setName("Seja bem vindo ao banco de consultas!"); // NOI18N
-        label3.setText("Seja bem vindo ao banco de consultas!");
+        label3.setName(bundle.getString("SEJA BEM VINDO AO BANCO DE CONSULTAS!")); // NOI18N
+        label3.setText(bundle.getString("SEJA BEM VINDO AO BANCO DE CONSULTAS!")); // NOI18N
 
         jComboBox3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new Vector(datas.anos()) ));
@@ -107,21 +108,21 @@ public class Consulta extends javax.swing.JFrame {
         jComboBox3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jComboBox3.setName("boxFinal"); // NOI18N
 
-        jButton1.setText("Consultar");
+        jButton1.setText(bundle.getString("CONSULTAR")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Sair");
+        jButton2.setText(bundle.getString("SAIR")); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Gráfico");
+        jButton3.setText(bundle.getString("GRÁFICO")); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -246,12 +247,12 @@ public class Consulta extends javax.swing.JFrame {
         final NumberAxis yAxis = new NumberAxis(0, 40000, 20000);        
         final ScatterChart<Number,Number> sc = new
             ScatterChart<>(xAxis,yAxis);
-        xAxis.setLabel("Ano");                
-        yAxis.setLabel("Mortes registradas");
-        sc.setTitle("Mortes por acidentes de Trabalho em SP");
+        xAxis.setLabel(java.util.ResourceBundle.getBundle("userinterface/lingua_pt").getString("ANO"));                
+        yAxis.setLabel(java.util.ResourceBundle.getBundle("userinterface/lingua_pt").getString("MORTES REGISTRADAS"));
+        sc.setTitle(java.util.ResourceBundle.getBundle("userinterface/lingua_pt").getString("MORTES POR ACIDENTES DE TRABALHO EM SP"));
        
         XYChart.Series series1 = new XYChart.Series();
-        series1.setName("Mortes");
+        series1.setName(java.util.ResourceBundle.getBundle("userinterface/lingua_pt").getString("MORTES"));
         for (int ano=inicio; ano < fim; ++ano) {
             series1.getData().add(new XYChart.Data(ano, datas.valor(ano)));
         }
@@ -274,7 +275,7 @@ public class Consulta extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("userinterface/lingua_pt").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
